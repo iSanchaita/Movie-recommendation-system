@@ -1,8 +1,9 @@
-//TMDB
-
 const API_KEY = 'api_key=1cf50e6248dc270629e802686245c2c8';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
+const HOLLYWOOD_API = BASE_URL + '/discover/movie?sort_by=popularity.desc&with_original_language=en&' + API_KEY;
+const BOLLYWOOD_API = BASE_URL + '/discover/movie?sort_by=popularity.desc&with_original_language=hi&' + API_KEY;
+const BENGALI_API = BASE_URL + '/discover/movie?sort_by=popularity.desc&with_original_language=bn&' + API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
@@ -223,9 +224,8 @@ function showMovies(data) {
                 <h3>Overview</h3>
                 ${overview}
                 <br/> 
-                <button class="know-more" id="${id}">Know More</button
+                <button class="know-more" id="${id}">Know More</button>
             </div>
-        
         `
 
         main.appendChild(movieEl);
