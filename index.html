@@ -9,22 +9,23 @@
 <body>
     
     <header>
-        <form  id="form">
-            <input type="text" placeholder="Search" id="search" class="search">
+        <form id="form">
+            <label for="search" class="visually-hidden">Search Movies</label>
+            <input type="text" placeholder="Search" id="search" class="search" autocomplete="off">
         </form>
     </header>
     <div id="tags"></div>
     <div id="myNav" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button class="closebtn" onclick="closeNav()" aria-label="Close overlay">&times;</button>
     
         <!-- Overlay content -->
         <div class="overlay-content" id="overlay-content"></div>
         
-        <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+        <button class="arrow left-arrow" id="left-arrow" aria-label="Previous">&#8656;</button> 
         
-        <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+        <button class="arrow right-arrow" id="right-arrow" aria-label="Next">&#8658;</button>
 
     </div>
     <main id="main"></main>
