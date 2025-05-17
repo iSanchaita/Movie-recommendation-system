@@ -194,10 +194,9 @@ main{
     top: 10%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-top: 30px;
   }
   
-  /* The navigation links inside the overlay */
   .overlay a {
     padding: 8px;
     text-decoration: none;
@@ -230,6 +229,45 @@ main{
     }
   }
 
+/* Style overlay buttons like links */
+.overlay button.closebtn,
+.overlay button.arrow {
+    background: none;
+    border: none;
+    color: #818181;
+    padding: 8px;
+    font-size: 36px;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay button.closebtn:hover,
+.overlay button.arrow:hover,
+.overlay button.closebtn:focus,
+.overlay button.arrow:focus {
+    color: #f1f1f1;
+    outline: none;
+}
+
+.overlay button.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay button.closebtn,
+    .overlay button.arrow {
+        font-size: 20px;
+    }
+    .overlay button.closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
 
   .embed.hide{
       display: none;
@@ -273,4 +311,13 @@ main{
 
 .dots .dot.active{
     border-color: orange;
+}
+
+/* Add this for accessibility if using visually-hidden labels */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
